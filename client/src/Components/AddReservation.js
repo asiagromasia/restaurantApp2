@@ -3,23 +3,9 @@ import axios from 'axios';
 
 export default class AddReservation extends Component {
        state = {
-       guestName: '',
-     partyNumber: '',
-         resDate: '',
-        time24hr: '',
-        // weekDay: '',
-     tableNumber: '',
-            date: {type: Date, default: Date.now },
-    instructions:''
-    }
-//added possibly wrong
-/*componentDidMount(){
-    axios.get('http://localhost:3200/api/reservation')
-        .then(res => {
-            console.log(res);
-            this.setState({reservation: res.data});
-        });
-}*/
+           reservations: []
+       }
+
 
 handleChange = event => {
     const value = event.target.value;
@@ -45,7 +31,7 @@ render(){
             <form onSubmit={this.handleSubmit}>
                 <label>
                      Guest Name:
-                    <input type="text" name="guestName" defaultValue={this.state.name} value={this.state.guestName} onChange={this.handleChange} />
+                    <input type="text" name="guestName" defaultValue={this.state.guestName} value={this.state.guestName} onChange={this.handleChange} />
                 </label>
                 <label>         
                     Party number          
@@ -90,20 +76,3 @@ render(){
     )
 }
 }
-//                <label>
-//                     Today's Date:
-//                    <input type="text" name="date" value={this.state.date} onChange={this.handleChange} />
-//                </label>
- /*      <label>         
-                    Weekday:          
-                        <select name="weekDay" onChange={this.handleChange} value={this.state.weekDay}>    
-                            <option value="-">-</option>
-                            <option value="Monday">Monday</option>  
-                            <option value="Tuesday">Tuesday</option>
-                            <option value="Wednesday">Wednesday</option> 
-                            <option value="Thursday">Thursday</option>                 
-                            <option value="Friday">Friday</option> 
-                            <option value="Saturday">Saturday</option>
-                            <option value="Sunday">Sunday</option>
-                        </select>   
-                </label>  */
