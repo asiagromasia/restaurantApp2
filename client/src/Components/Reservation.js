@@ -5,6 +5,7 @@ class Reservation extends Component {
         super();
         this.state = {
             reservation: [],
+            instructions:''
         }
     }
 
