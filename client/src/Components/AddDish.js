@@ -33,7 +33,7 @@ render(){
     return(
         <div>
             <form onSubmit={this.handleSubmit}>
-                <label>
+                <label> <h4>ADD DISH:</h4>
                      Dish Name:
                     <input type="text" name="name" defaultValue={this.state.name} value={this.state.name} onChange={this.handleChange} />
                 </label>
@@ -42,12 +42,13 @@ render(){
                     <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
                 </label>
                 <label>
-                     Ingredience:
-                    <input type="text" name="ingredience" value={this.state.ingredience} onChange={this.handleChange} />
+                     Ingredients:
+                    <input type="text" name="ingredients" value={this.state.ingredients} onChange={this.handleChange} />
                 </label>
                 <label>         
                     Menu version          
-                        <select name="version" onChange={this.handleChange} value={this.state.version}>                
+                        <select name="version" onChange={this.handleChange} value={this.state.version}> 
+                             <option value="add">--</option> 
                             <option value="3/11">3/11</option>  
                             <option value="3/12">3/12</option>             
                             <option value="3/13">3/13</option>                 
