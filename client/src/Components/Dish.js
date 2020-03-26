@@ -22,8 +22,9 @@ class Dish extends Component {
     }
 
     render(){
-              return (<div>
-                  {this.state.dish.map(dish => <li key = {dish.id}> {dish.name} {dish.description}  </li>
+        return (<div>
+                 <h3>MENU:</h3> 
+                  {this.state.dish.map(dish => <li key = {dish.id}> {dish.name}, {dish.description},{dish.version},{dish.ingredients}</li>
                      )}
                   </div>
             )
