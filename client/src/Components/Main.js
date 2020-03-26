@@ -6,24 +6,26 @@ import Table from './Table';
 import AddsTables from './AddsTables';
 import Dish from './Dish';
 import AddDish from './AddDish';
-import UpdateMenuItem from './UpdateMenuItem' 
+import UpdateMenuItem from './UpdateMenuItem';
+import Order from './Order';
+import AddOrder from './AddOrder';
 
 class Main extends Component {   
     render(){      
         return( <div>  
-                   <Title/> 
-                  <br/>
+                  <Title/> 
                   <Table/>
                   <AddsTables/>
-                  <Dish/>
-                  <AddDish/>
-                 
                   <Reservation/>
                   <AddReservation/>
+              
+                  <Dish/>
+                  <AddDish/>
+                  <Order/>
+                  <AddOrder/>
                
                 </div>      
-              )   //before in div was<DishList/> <Dish/><AddDish/>
-             // <UpdateMenuItem/>
+              )   
     }
 }
 export default Main;
